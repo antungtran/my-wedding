@@ -236,13 +236,13 @@ ul, li {
 	position: absolute;
 	top: 5px;
 	right: -85px;
-	content: url(../../images/icon/heading_rignt.png);
+	content: url(../images/icon/heading_rignt.png);
 	width: 75px;
 	height: 35px;
 }
 .heading h3::before {
 	position: absolute;
-	content: url(../../images/icon/heading_left.png);
+	content: url(../images/icon/heading_left.png);
 	width: 75px;
 	height: 35px;
 	top: 5px;
@@ -390,7 +390,7 @@ ul, li {
 .banner-logo {
 	position: relative;
 	display: inline-block;
-	background: url(../../images/icon/main_logo.png) no-repeat center center;
+	background: url(../images/icon/main_logo.png) no-repeat center center;
 	width: 310px;
 	height: 305px;
 	padding: 115px 0px;
@@ -526,21 +526,21 @@ ul, li {
 
 
 #background-carousel .item-no1 {
-  background: url(../../images/slider/slide-1.jpg) no-repeat; 
+  background: url(../images/slider/slide-1.jpg) no-repeat; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; 
 }
 #background-carousel .item-no2 {
-  background: url(../../images/slider/slide-2.jpg) no-repeat;
+  background: url(../images/slider/slide-2.jpg) no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 #background-carousel .item-no3 {
-  background: url(../../images/slider/slide-3.jpg) no-repeat;
+  background: url(../images/slider/slide-3.jpg) no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -580,7 +580,7 @@ ul, li {
 */
 .couple {
 	padding: 100px 0;
-	background: url(../../images/icon/love_twist.png) no-repeat 50% 65%;
+	background: url(../images/icon/love_twist.png) no-repeat 50% 65%;
 }
 .thumbnail-block {
 	position:relative;
@@ -772,7 +772,7 @@ ul, li {
 	background: #fafafa;
 }
 .love-sign {
-	background: url(../../images/icon/love.png) no-repeat center center;
+	background: url(../images/icon/love.png) no-repeat center center;
 	display: inline-block;
 	position: absolute;
 	top: -64px;
@@ -886,7 +886,7 @@ ul, li {
 */
 
 .rsvpLink {
-	background: url(../../images/bg/section_bg.jpg) no-repeat fixed center center;
+	background: url(../images/bg/section_bg.jpg) no-repeat fixed center center;
 }
 .rsvpLink .color-overlay {
 	background: rgba(0,0,0,.7);
@@ -1294,7 +1294,7 @@ ul, li {
 */
 
 .quote {
-	background: url(../../images/bg/quote_bg.jpg) no-repeat fixed center center;
+	background: url(../images/bg/quote_bg.jpg) no-repeat fixed center center;
 }
 .quote .color-overlay {
 	padding: 70px 0 60px;
@@ -1314,7 +1314,7 @@ blockquote:after {
 	position: absolute;
 	bottom: -28px;
 	right: 20px;
-	background: url(../../images/icon/block_qoute_right.png) no-repeat;
+	background: url(../images/icon/block_qoute_right.png) no-repeat;
 	width: 50px;
 	height: 40px;
 }
@@ -1323,7 +1323,7 @@ blockquote:before {
 	position: absolute;	
     top: -28px;
     left: 30px;
-    background: url(../../images/icon/block_qoute_left.png) no-repeat;
+    background: url(../images/icon/block_qoute_left.png) no-repeat;
     width: 50px;
     height: 40px;
 }
@@ -1481,7 +1481,7 @@ input[type="submit"]:focus, input[type="submit"]:active {
 */
 
 .blog-bg {
-	background: url(../../images/bg/banner_bg.jpg) no-repeat fixed center top;
+	background: url(../images/bg/banner_bg.jpg) no-repeat fixed center top;
 	color: #fff;
 	margin-top: 68px;
 }
@@ -1596,7 +1596,7 @@ input[type="submit"]:focus, input[type="submit"]:active {
 }
 .single-blog-detail blockquote:after {
 	content: "";
-	background: url("../../images/icon/quote_right.png") no-repeat center center;
+	background: url("../images/icon/quote_right.png") no-repeat center center;
 	position: absolute;
 	bottom: 35px;
 	right: 35px;
@@ -1605,7 +1605,7 @@ input[type="submit"]:focus, input[type="submit"]:active {
 }
 .single-blog-detail blockquote:before {
 	content: "";
-	background: url("../../images/icon/quote_left.png") no-repeat center center;
+	background: url("../images/icon/quote_left.png") no-repeat center center;
 	position: absolute;
 	top: 40px;
 	left: 45px;
@@ -1793,7 +1793,7 @@ ul.media-list + ul .media-object {
 */
 
 footer {
-	background: url(../../images/bg/section_bg.jpg) no-repeat fixed center center;
+	background: url(../images/bg/section_bg.jpg) no-repeat fixed center center;
 	text-align: center;
     -webkit-background-size: cover;
     background-size: cover;
@@ -1811,7 +1811,7 @@ footer .color-overlay {
 }
 .footer-logo {
 	display: inline-block;
-	background: url("../../images/icon/footer_logo.png") no-repeat center center;
+	background: url("../images/icon/footer_logo.png") no-repeat center center;
 	width: 133px;
 	height: 128px;
 	padding: 48px 0px;
@@ -1915,7 +1915,7 @@ footer .nav {
     position: relative;
     padding: 110px 0;
     text-align: center;
-    background-image: url(../../images/bg/fun_fact.jpg);
+    background-image: url(../images/bg/fun_fact.jpg);
     background-position: center center;
     background-size: cover;
 }
@@ -1934,7 +1934,7 @@ footer .nav {
     position: relative;
     padding: 110px 0;
     text-align: center;
-    background-image: url(../../images/bg/testimonial_bg.jpg);
+    background-image: url(../images/bg/testimonial_bg.jpg);
     background-position: center center;
     background-size: cover;
 }
@@ -1965,7 +1965,7 @@ footer .nav {
 .testimonial-slider blockquote:after {
 	bottom: 0;
 	right: 20px;
-	background: url(../../images/icon/block_qoute_right.png) no-repeat;
+	background: url(../images/icon/block_qoute_right.png) no-repeat;
 	width: 50px;
 	height: 40px;
 }
@@ -1974,7 +1974,7 @@ footer .nav {
 	position: absolute;	
     top: 0;
     left: 30px;
-    background: url(../../images/icon/block_qoute_left.png) no-repeat;
+    background: url(../images/icon/block_qoute_left.png) no-repeat;
     width: 50px;
     height: 40px;
 }

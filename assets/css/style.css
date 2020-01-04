@@ -1017,7 +1017,7 @@ ul, li {
     color: #fff;
     border-radius: 50%;
     text-align: center;
-    padding: 25px 10px;
+    padding: 15px 10px;
 }
 .event-year {
     color: #B8B8B8;	
@@ -1294,7 +1294,8 @@ ul, li {
 */
 
 .quote {
-	background: url(../images/bg/quote_bg.jpg) no-repeat fixed center center;
+	background: url(../images/bg/quote_bg.jpg) no-repeat;
+	background-size: cover;
 }
 .quote .color-overlay {
 	padding: 70px 0 60px;
@@ -1793,7 +1794,7 @@ ul.media-list + ul .media-object {
 */
 
 footer {
-	background: url(../images/bg/section_bg.jpg) no-repeat fixed center center;
+	background: url(../images/bg/section_bg.jpg) no-repeat;
 	text-align: center;
     -webkit-background-size: cover;
     background-size: cover;

@@ -624,13 +624,13 @@
 	
 	.heading h3 { font-size: 24px;}
 	.heading h3::after {
-		content: url(../../images/icon/heading_rignt_responsive.png);
+		content: url(../images/icon/heading_rignt_responsive.png);
 		width: 50px;
 		height: 23px;
 		right: -60px;
 	}
 	.heading h3::before {
-		content: url(../../images/icon/heading_left_responsive.png);
+		content: url(../images/icon/heading_left_responsive.png);
 		width: 50px;
 		height: 23px;
 		left: -60px;

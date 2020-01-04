@@ -2144,7 +2144,8 @@ footer .nav {
 
 .info-content .item{
 	margin-bottom:10px;
-	color:#d44646
+	color:#d44646;
+	font-size: 14px!important;
 }
 
 .info-content .item .sub-title{

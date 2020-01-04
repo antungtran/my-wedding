@@ -393,7 +393,7 @@ ul, li {
 	background: url(../images/icon/main_logo.png) no-repeat center center;
 	width: 310px;
 	height: 305px;
-	padding: 115px 0px;
+	padding: 130px 0px;
 	margin-top: 80px;
 	margin-bottom: 107px;
 	background-size: cover;
@@ -2094,4 +2094,61 @@ footer .nav {
 }
 
 
+
+/*
+	Info window
+*/
+
+.info-content{
+	width:300px;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.info-content .title{
+	font-family: 'Lobster', cursive;
+    color: #d44646;
+    text-align: center;
+    border-bottom: 1px solid;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.info-content .title:before{
+	background-image: url(../images/icon/heading_left.png);
+	background-size: 36px 16px;
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+	content: "";
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 30px;
+	top:5px;
+}
+
+.info-content .title:after{
+	background-image: url(../images/icon/heading_rignt.png);
+	background-size: 36px 16px;
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+	content: "";
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 25px;
+	top:5px;
+}
+
+.info-content .item{
+	margin-bottom:10px;
+	color:#d44646
+}
+
+.info-content .item .sub-title{
+	float:left;
+	min-width: 95px;
+}
 

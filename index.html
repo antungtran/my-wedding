@@ -89,7 +89,7 @@
                 <div class="row">
                     <div class="col-sm-12 text-center">
                         <div class="banner-logo">
-		    				<h2>An Tung &amp; Ngoc Diep <small>are getting married</small></h2> 
+		    				<h2>An Tùng &amp; Ngọc Diệp</h2> 
 		    		    </div>
                     </div>
                 </div>
@@ -382,7 +382,7 @@
                         <!-- /.event-img end -->
                         <div class="event-body">
                             <h5><a href="blog-single.html">NHÀ TRAI</a></h5>
-                            <p>Nhà hàng Thu Nguyệt, Tổ 3, Khu phố 3, Thị trấn Tân Minh, Huyện Hàm Tân, Tỉnh Bình Thuận</p>
+                            <p>Nhà hàng Thu Nguyệt, 461 Nguyễn Huệ, TT. Tân Minh, Hàm Tân, Bình Thuận</p>
                             <span class="event-date">March 1st <span class="event-year">2020</span></span>
                         </div>
                         <!-- /.event-body end -->
@@ -601,7 +601,7 @@
     <script src="assets/js/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmiJjq5DIg_K9fv6RE72OY__p9jz0YTMI"></script>
+    <script type="text/javascript" src="http://developers.vietbando.com/V2/Scripts/VietbandoMapsAPI.js?key=37749a8a-726f-4c30-99fa-e6df595d27b1">//tk domain: 370ecb57-356e-4231-bde0-a03d4d8ccbe3
     <script src="assets/js/jquery.sticky.js"></script>
     <script src="assets/js/jquery.localScroll.min.js"></script>
     <script src="assets/js/jquery.nav.js"></script>
@@ -612,95 +612,6 @@
     <script src="assets/js/jquery.placeholder.js"></script>
     <script src="assets/js/wow.js"></script>
     <script src="assets/js/script.js"></script>
-
-    <script>
-        function initialize() {
-            // Create an array of styles.
-            var styles = [{
-                    stylers: [{
-                            hue: "#D44645"
-                        },
-                        {
-                            saturation: 0
-                        }
-                    ]
-                },
-                {
-                    featureType: 'water',
-                    stylers: [{
-                            visibility: "on"
-                        },
-                        {
-                            color: "#9a9efd"
-                        },
-                        {
-                            weight: 2.2
-                        },
-                        {
-                            gamma: 2.54
-                        }
-                    ]
-                },
-                {
-                    featureType: "road",
-                    elementType: "geometry",
-                    stylers: [{
-                            lightness: 100
-                        },
-                        {
-                            visibility: "simplified"
-                        }
-                    ]
-                }, {
-                    featureType: "road",
-                    elementType: "labels",
-                    stylers: [{
-                            hue: "#00ffee"
-                        },
-                        {
-                            lightness: 10
-                        },
-                        {
-                            visibility: "simplified"
-                        }
-                    ]
-                }
-            ];
-
-            // Create a new StyledMapType object, passing it the array of styles,
-            // as well as the name to be displayed on the map type control.
-            var styledMap = new google.maps.StyledMapType(styles, {
-                name: "Styled Map"
-            });
-
-            var mapCanvas = document.getElementById('map');
-            var nevada = new google.maps.LatLng(39.2621799, -121.0168816);
-            var mapOptions = {
-                zoom: 15,
-                center: nevada,
-                mapTypeControlOptions: {
-                    mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-                },
-                scrollwheel: false,
-                disableDefaultUI: true
-            };
-            var map = new google.maps.Map(mapCanvas, mapOptions)
-
-            //Associate the styled map with the MapTypeId and set it to display.
-            map.mapTypes.set('map_style', styledMap);
-            map.setMapTypeId('map_style');
-
-            // To add the marker to the map, use the 'map' property
-            var image = 'assets/images/icon/map_icon.png';
-            var marker = new google.maps.Marker({
-                position: nevada,
-                map: map,
-                icon: image
-            });
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
-
-    </script>
 
 </body>
 

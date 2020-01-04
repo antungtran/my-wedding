@@ -17,9 +17,9 @@ $(document).ready(function () {
     //--------------------Sticky nav----------------------
     //----------------------------------------------------
 
-    $("#sticker").sticky({
-        topSpacing: 0
-    });
+    // $("#sticker").sticky({
+    //     topSpacing: 0
+    // });
 
     //----------------------------------------------------
     //-----------Appearence of navigation-----------------
@@ -252,5 +252,42 @@ $(document).ready(function () {
         );
         document.querySelector('head').appendChild(msViewportStyle);
     }
+
+    /* 
+        Init Map
+    */
+
+   $(document).ready(function(e){
+        var mapProp = {
+            center: new vbd.LatLng(10.843348, 107.626960),
+            zoom: 15
+        };
+
+        /*Tạo map*/
+        var map = new vbd.Map(document.getElementById("map"), mapProp);
+
+        var size = new vbd.Size(50, 50);
+        var icon = new vbd.Icon({ size: size, url: 'assets/images/icon/map_marker.svg', origin: new vietbando.Point(0, 0) });
+        var marker = new vbd.Marker({
+            position: new vbd.LatLng(10.843348, 107.626960),
+            icon: icon
+        });
+        marker.setMap(map);
+
+        var html = [];
+        
+        html.push(`<div class="info-content">`);
+        html.push(`    <div class="title">An Tùng & Ngọc Diệp</div>`);
+        html.push(`    <div class="item">`);
+        html.push(`        <div class="sub-title"><i class="fa fa-map-marker"></i> <b>Địa điểm:</b></div> <div>Nhà hàng Thu Nguyệt</div>`);
+        html.push(`    </div>`);
+        html.push(`    <div class="item">`);
+        html.push(`        <div class="sub-title" style="height:50px"><i class="fa fa-map-marker"></i> <b>Địa chỉ:</b></div> <div>461 Nguyễn Huệ, TT. Tân Minh, Hàm Tân, Bình Thuận</div>`);
+        html.push(`    </div>`);
+        html.push(`</div>`);
+        
+        var infowindow = new vbd.InfoWindow({ content: html.join('') });
+        infowindow.open(map, marker);
+    })
 
 });

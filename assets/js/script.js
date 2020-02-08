@@ -215,30 +215,61 @@ $(document).ready(function () {
 
 
     // --------------RSVP Form Ajax request-----------------------
+    $('#contact').hide();
+    $('a[href="#contact"]').hide();
 
-    $('.contact_form').on('submit', function (event) {
-        event.preventDefault();
+    const API_LINK = "https://script.google.com/macros/s/AKfycbynHP8hs3o-TUWvLduER44yR_cI7wUiiG9T2L7TEiHVHexH9CE/exec";
 
-        // $this = $(this);
-
-        var data = {
-            name: $('#name').val(),
-            numberOfGuest: $('#numberOfGuest').val(),
-            eventAttending: $('#eventAttending').val(),
-            // email: $('#contact_email').val(),
-            // subject: $('#subject').val(),
-            message: $('#message').val()
-        };
-
+    var bindGuestInfo = function(id){
         $.ajax({
-            type: "POST",
-            url: "email.php",
-            data: data,
-            success: function (msg) {
-                $('.contact-success').fadeIn().delay(3000).fadeOut();
+            url: API_LINK,
+            type: "GET",
+            data: {
+                cmd: 'getbyid',
+                id:id
+            },
+            success: function(data){
+                if (data && data.value){
+                    var guestName = data.value.name;
+
+                    if (!data.value.allow){
+                        $('#helloGuest').html(`<b>Xin chào ${guestName}!</b>.</br>Sự hiện diện của ${guestName} là niềm vui và sự chúc phúc lớn nhất cho cô dâu, chú rể và gia đình`);
+                        $('#btnSubmit').show();
+                    }
+                    else{
+                        $('#helloGuest').html(`<b>Xin chào ${guestName}!</b>.</br>Cảm ơn bạn đã đồng ý tham gia tiệc mừng`);
+                        $('#btnSubmit').hide();
+                    }
+
+                    $('a[href="#contact"]').show();
+                    $('#contact').show();
+                }
             }
-        });
-    });
+        })
+    };
+
+    var allow = function(id){
+        $.ajax({
+            url: API_LINK,
+            type: "GET",
+            data: {
+                cmd: 'allow',
+                id:id
+            },
+            beforeSend: function(){
+                $('#btnSubmit').attr('disabled', true);
+                $('#btnSubmit').val("ĐANG GỬI...");
+            },
+            success: function(data){
+                if (data && data.value){
+                    $('#helloGuest').html('');
+                    var heading = $('#helloGuest').parent().find('h3');
+                    heading.html(`Cảm ơn bạn đã đồng ý tham dự tiệc mừng`).addClass('heading wow animated fadeInUp');
+                    $('#btnSubmit').hide();
+                }
+            }
+        })
+    }
 
     /* =================================
     ===  IE10 ON WINDOWS 8 FIX      ====
@@ -286,4 +317,28 @@ $(document).ready(function () {
     
     var infowindow = new vbd.InfoWindow({ content: html.join('') });
     infowindow.open(map, marker);
+
+    var url = new URL(location.href);
+
+    if (url){
+        var id = url.searchParams.get("id");
+
+        if (id){
+           bindGuestInfo(id);
+        }
+    }
+
+    $('#btnSubmit').on('click', function(e){
+
+        var url = new URL(location.href);
+
+        if (url){
+            var id = url.searchParams.get("id");
+    
+            if (id){
+               allow(id);
+            }
+        }
+
+    });
 });
